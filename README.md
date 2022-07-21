@@ -1,6 +1,12 @@
-# receitas_refeicoes
+# Meals - Receitas de Refeições
 
-A new Flutter project.
+Terceiro projeto do curso de Flutter.
+
+## Curso de Flutter
+
+Um Curso Completo Para Aprender Google Flutter e Dart Para a Construção de Apps Nativas Para iOS e Android.
+
+[Link do curso](https://www.udemy.com/course/curso-flutter/)
 
 ## Getting Started
 
