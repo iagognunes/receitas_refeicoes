@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:receitas_refeicoes/screens/categories_meals_screen.dart';
 import 'package:receitas_refeicoes/screens/categories_screen.dart';
+import 'package:receitas_refeicoes/utils/app_routes.dart';
 
 void main() => runApp(const MyApp());
 
@@ -20,7 +22,10 @@ class MyApp extends StatelessWidget {
                   const TextStyle(fontSize: 20, fontFamily: 'RobotoCondensed'),
             ),
       ),
-      home: const CategoriesScreen(),
+      routes: {
+        AppRoutes.home: (ctx) => const CategoriesScreen(),
+        AppRoutes.categoriesMeals: (ctx) => const CategoriesMealsScreen(),
+      },
     );
   }
 }
