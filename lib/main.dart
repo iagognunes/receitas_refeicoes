@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:receitas_refeicoes/screens/categories_meals_screen.dart';
-import 'package:receitas_refeicoes/screens/categories_screen.dart';
 import 'package:receitas_refeicoes/screens/meal_detail_screen.dart';
 import 'package:receitas_refeicoes/screens/tabs_screen.dart';
 import 'package:receitas_refeicoes/utils/app_routes.dart';
