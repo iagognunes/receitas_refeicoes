@@ -3,26 +3,38 @@ import 'package:receitas_refeicoes/components/main_drawer.dart';
 import 'package:receitas_refeicoes/models/settings.dart';
 
 class SettingsScreen extends StatefulWidget {
-  const SettingsScreen({super.key});
+  final Settings settings;
+  final Function(Settings) onSettingsChanged;
+  const SettingsScreen(
+      {super.key, required this.onSettingsChanged, required this.settings});
 
   @override
   State<SettingsScreen> createState() => _SettingsScreenState();
 }
 
 class _SettingsScreenState extends State<SettingsScreen> {
-  var settings = Settings();
+  late Settings settings;
+
+  @override
+  void initState() {
+    super.initState();
+    settings = widget.settings;
+  }
 
   Widget createSwitch(
     String title,
     String subtitle,
     bool value,
-    onChanged,
+    Function(bool) onChanged,
   ) {
-    return SwitchListTile(
+    return SwitchListTile.adaptive(
       title: Text(title),
       subtitle: Text(subtitle),
       value: value,
-      onChanged: onChanged,
+      onChanged: (value) {
+        onChanged(value);
+        widget.onSettingsChanged(settings);
+      },
     );
   }
 
